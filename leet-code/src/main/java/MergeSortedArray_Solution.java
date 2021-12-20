@@ -2,7 +2,9 @@ import java.util.Arrays;
 
 /**
  * @author: Zaman Shajib
- * @email: md.shajib@bKash.com
+ * @email: mbshajib@gmail.com
+ * @git: https://github.com/mbzshajib
+ * @linkedin: https://www.linkedin.com/in/mbzshajib/
  * Created on 12/9/21 at 12:56 PM.
  */
 public class MergeSortedArray_Solution {

@@ -3,8 +3,9 @@ import java.util.stream.Stream;
 
 /**
  * @author: Zaman Shajib
- * @email: md.shajib@bKash.com
- * Created on 12/6/21 at 4:49 PM.
+ * @email: mbshajib@gmail.com
+ * @git: https://github.com/mbzshajib
+ * @linkedin: https://www.linkedin.com/in/mbzshajib/
  */
 public class MinimumNumberOfOperationsToMoveAllBallsToEachBox_Solution {
     public static void main(String[] args) {

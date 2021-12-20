@@ -3,7 +3,9 @@ import java.util.Stack;
 
 /**
  * @author: Zaman Shajib
- * @email: md.shajib@bKash.com
+ * @email: mbshajib@gmail.com
+ * @git: https://github.com/mbzshajib
+ * @linkedin: https://www.linkedin.com/in/mbzshajib/
  * Created on 12/6/21 at 9:16 PM.
  */
 public class BestTimeToBuyAndSellStock_Solution {

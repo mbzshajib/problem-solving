@@ -3,7 +3,9 @@ import java.util.Map;
 
 /**
  * @author: Zaman Shajib
- * @email: md.shajib@bKash.com
+ * @email: mbshajib@gmail.com
+ * @git: https://github.com/mbzshajib
+ * @linkedin: https://www.linkedin.com/in/mbzshajib/
  * Created on 12/7/21 at 12:33 PM.
  */
 public class RomanToInteger_Solution {

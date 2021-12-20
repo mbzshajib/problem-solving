@@ -6,8 +6,9 @@ import java.util.stream.Stream;
 
 /**
  * @author: Zaman Shajib
- * @email: md.shajib@bKash.com
- * Created on 12/6/21 at 3:58 PM.
+ * @email: mbshajib@gmail.com
+ * @git: https://github.com/mbzshajib
+ * @linkedin: https://www.linkedin.com/in/mbzshajib/
  */
 public class MinimumCostToMoveChipsToTheSamePosition_Solution {
     public static void main(String[] args) {

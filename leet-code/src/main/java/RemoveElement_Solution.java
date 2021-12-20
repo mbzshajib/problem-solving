@@ -2,8 +2,9 @@ import java.util.Arrays;
 
 /**
  * @author: Zaman Shajib
- * @email: md.shajib@bKash.com
- * Created on 12/7/21 at 12:47 AM.
+ * @email: mbshajib@gmail.com
+ * @git: https://github.com/mbzshajib
+ * @linkedin: https://www.linkedin.com/in/mbzshajib/
  */
 public class RemoveElement_Solution {
     public static void main(String[] args) {

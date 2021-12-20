@@ -2,8 +2,9 @@ import java.util.Arrays;
 
 /**
  * @author: Zaman Shajib
- * @email: md.shajib@bKash.com
- * Created on 12/15/21 at 1:19 AM.
+ * @email: mbshajib@gmail.com
+ * @git: https://github.com/mbzshajib
+ * @linkedin: https://www.linkedin.com/in/mbzshajib/
  */
 public class PlusOne_Solution {
     public static void main(String[] args) {
