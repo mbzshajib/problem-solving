@@ -1,3 +1,5 @@
+package com.mbzshajib.problem.leet;
+
 /**
  * @author: Zaman Shajib
  * @email: mbshajib@gmail.com

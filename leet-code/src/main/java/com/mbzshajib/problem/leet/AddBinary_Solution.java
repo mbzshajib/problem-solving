@@ -1,3 +1,5 @@
+package com.mbzshajib.problem.leet;
+
 import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 
