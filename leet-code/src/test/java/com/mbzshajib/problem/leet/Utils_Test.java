@@ -1,7 +1,6 @@
 package com.mbzshajib.problem.leet;
 
 
-import com.sun.source.tree.Tree;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.platform.suite.api.Suite;
@@ -92,5 +91,16 @@ public class Utils_Test {
         Assert.assertEquals(treeNode.left.right.val, 3);
         Assert.assertEquals(treeNode.right.left.val, 4);
         Assert.assertEquals(treeNode.right.right.val, 5);
+    }
+
+    @Test
+    void prepareTree_Test_001_NullRightRight_V6() {
+        TreeNode treeNode = Utils.prepareTree(new Integer[]{1,null,2,3});
+        Assert.assertEquals(treeNode.val, 1);
+        Assert.assertNull(treeNode.left);
+        Assert.assertEquals(treeNode.right.val, 2);
+        Assert.assertNotNull(treeNode.right.left);
+        Assert.assertEquals(treeNode.right.left.val,3);
+        Assert.assertNull(treeNode.right.right);
     }
 }
