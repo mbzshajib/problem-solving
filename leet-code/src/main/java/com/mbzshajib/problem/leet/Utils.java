@@ -1,6 +1,7 @@
 package com.mbzshajib.problem.leet;
 
 import java.util.ArrayDeque;
+import java.util.List;
 import java.util.Queue;
 
 /**
@@ -26,12 +27,33 @@ public class Utils {
             }
             counter++;
             if (counter >= data.length) break;
-            if (data[counter ] != null) {
+            if (data[counter] != null) {
                 node.right = new TreeNode(data[counter]);
                 queue.add(node.right);
             }
             counter++;
         }
         return root;
+    }
+
+    public static void traversePreOrder(TreeNode node, List<Integer> result) {
+        if (node == null) return;
+        result.add(node.val);
+        traversePreOrder(node.left, result);
+        traversePreOrder(node.right, result);
+    }
+
+    public static void traverseInOrder(TreeNode node, List<Integer> result) {
+        if (node == null) return;
+        traverseInOrder(node.left, result);
+        result.add(node.val);
+        traverseInOrder(node.right, result);
+    }
+
+    public static void traversePostOrder(TreeNode node, List<Integer> result) {
+        if (node == null) return;
+        traversePostOrder(node.left, result);
+        traversePostOrder(node.right, result);
+        result.add(node.val);
     }
 }
