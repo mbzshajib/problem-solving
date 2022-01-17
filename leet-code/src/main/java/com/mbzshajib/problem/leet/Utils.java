@@ -1,8 +1,12 @@
 package com.mbzshajib.problem.leet;
 
 import java.util.ArrayDeque;
+import java.util.Collection;
 import java.util.List;
 import java.util.Queue;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 /**
  * @author: Zaman Shajib
@@ -55,5 +59,22 @@ public class Utils {
         traversePostOrder(node.left, result);
         traversePostOrder(node.right, result);
         result.add(node.val);
+    }
+
+    public static ListNode prepareLinkList(Integer[] data) {
+        if (data == null) return null;
+        if (data.length == 0) return null;
+        ListNode root = new ListNode(data[0]);
+        AtomicReference<ListNode> node = new AtomicReference<>();
+        node.set(root);
+        IntStream.range(1, data.length)
+                .mapToObj(index -> {
+                    ListNode tmp = new ListNode(data[index]);
+                    node.get().next = tmp;
+                    node.set(tmp);
+                    return tmp;
+                })
+                .collect(Collectors.toList());
+        return root;
     }
 }
