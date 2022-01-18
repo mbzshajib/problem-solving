@@ -7,7 +7,7 @@ package com.mbzshajib.problem.leet;
  * @linkedin: https://www.linkedin.com/in/mbzshajib/
  * Created on 1/18/2022 at 10:27 AM.
  */
-public class RemoveDuplicates_From_Sorted_List_Solution {
+public class RemoveDuplicatesFromSortedList_Solution {
     public ListNode deleteDuplicates(ListNode head) {
         ListNode curr = head;
         while (curr != null) {
