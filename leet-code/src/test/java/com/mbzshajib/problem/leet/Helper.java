@@ -31,4 +31,31 @@ public class Helper {
         Utils.traversePostOrder(result, resultList);
         Assert.assertArrayEquals(expectedList.toArray(), resultList.toArray());
     }
+
+    public static void validateSameList(ListNode expected, ListNode result) {
+        int expectedLength = 0, resultLength = 0;
+        ListNode expectedTmp = expected, resultTmp = result;
+        while (expectedTmp != null) {
+            expectedLength++;
+            expectedTmp = expectedTmp.next;
+        }
+        int expectedData[] = new int[expectedLength];
+        for (int i = 0; i < expectedLength; i++) {
+            expectedData[i] = expected.val;
+            expected = expected.next;
+        }
+        while (resultTmp != null) {
+            resultLength++;
+            resultTmp = resultTmp.next;
+        }
+        int resultData[] = new int[resultLength];
+        for (int i = 0; i < resultLength; i++) {
+            resultData[i] = result.val;
+            result = result.next;
+        }
+        Assert.assertEquals(expectedLength, resultLength
+        );
+        Assert.assertArrayEquals(expectedData, resultData);
+
+    }
 }
