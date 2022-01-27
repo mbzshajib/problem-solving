@@ -1,8 +1,12 @@
 package com.mbzshajib.problem.leet;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.IntStream;
 
 /**
  * @author: Zaman Shajib
@@ -57,5 +61,16 @@ public class Helper {
         );
         Assert.assertArrayEquals(expectedData, resultData);
 
+    }
+
+    public static void matchTwoStringList(List<String> expected, List<String> result) {
+        Assertions.assertEquals(expected.size(), result.size());
+        Collections.sort(expected);
+        Collections.sort(result);
+        IntStream.range(0, expected.size())
+                .filter(index -> {
+                    Assertions.assertEquals(expected.get(index), result.get(index));
+                    return true;
+                }).forEach(System.out::println);
     }
 }
