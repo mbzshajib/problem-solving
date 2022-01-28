@@ -73,4 +73,25 @@ public class Helper {
                     return true;
                 }).forEach(System.out::println);
     }
+
+    public static void matchTwoIntegerList(List<Integer> expected, List<Integer> result) {
+        Assertions.assertEquals(expected.size(), result.size());
+        Collections.sort(expected);
+        Collections.sort(result);
+        IntStream.range(0, expected.size())
+                .filter(index -> {
+                    Assertions.assertEquals(expected.get(index), result.get(index));
+                    return true;
+                }).forEach(System.out::println);
+    }
+
+    public static void print(List<List<Integer>> result) {
+        result.stream()
+                .filter(data->{
+                    data.stream().forEach(System.out::print);
+                    return true;
+                }).forEach(data->{
+                    System.out.println();
+                });
+    }
 }
