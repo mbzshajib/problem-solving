@@ -87,11 +87,18 @@ public class Helper {
 
     public static void print(List<List<Integer>> result) {
         result.stream()
-                .filter(data->{
+                .filter(data -> {
                     data.stream().forEach(System.out::print);
                     return true;
-                }).forEach(data->{
+                }).forEach(data -> {
                     System.out.println();
                 });
+    }
+
+    public static void check2DMatrix(int[][] expected, int[][] result) {
+        for (int i = 0; i < expected.length; i++) {
+            for (int j = 0; j < expected[i].length; j++)
+                Assertions.assertEquals(expected[i][j], result[i][j]);
+        }
     }
 }
