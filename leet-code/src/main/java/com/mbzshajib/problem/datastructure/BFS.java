@@ -9,14 +9,14 @@ import java.util.*;
  * @linkedin: https://www.linkedin.com/in/mbzshajib/
  * Created on 2/1/2022 at 11:51 AM.
  */
-public class DFS {
+public class BFS {
     private Map<Integer, List<Integer>> adjacentListMapping;
 
-    public DFS() {
+    public BFS() {
         adjacentListMapping = new HashMap<>();
     }
 
-    public DFS insert(Integer fromNode, Integer toNode) {
+    public BFS insert(Integer fromNode, Integer toNode) {
         List<Integer> listOfAdjucentNodes = adjacentListMapping.getOrDefault(fromNode, new LinkedList<>());
         adjacentListMapping.put(fromNode, listOfAdjucentNodes);
         if (toNode != null) listOfAdjucentNodes.add(toNode);
