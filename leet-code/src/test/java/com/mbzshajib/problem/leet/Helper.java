@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Assertions;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
@@ -100,5 +101,13 @@ public class Helper {
             for (int j = 0; j < expected[i].length; j++)
                 Assertions.assertEquals(expected[i][j], result[i][j]);
         }
+    }
+
+    public static void printListOfListOfInteger(List<List<Integer>> lists) {
+        lists.stream()
+                .forEach(list -> {
+                            System.out.println(list.stream().map(integer -> integer.toString()).collect(Collectors.joining(",")));
+                        }
+                );
     }
 }
