@@ -110,4 +110,27 @@ public class Helper {
                         }
                 );
     }
+
+    public static void validateTwoMatrix(int[][] expected, int[][] provided) {
+        Assertions.assertEquals(expected.length, provided.length, "Row is not same");
+        Assertions.assertEquals(expected[0].length, provided[0].length, "Column is not same");
+        for (int i = 0; i < expected.length; i++)
+            for (int j = 0; j < expected[0].length; j++)
+                if (expected[i][j] != provided[i][j]) {
+                    System.out.println(i + "," + j + " is not same for both. Expected " + expected[i][j] + " provide " + provided[i][j]);
+                    Assert.assertEquals(expected[i][j], provided[i][j]);
+                }
+
+    }
+    public static void validateTwoMatrix(char[][] expected, char[][] provided) {
+        Assertions.assertEquals(expected.length, provided.length, "Row is not same");
+        Assertions.assertEquals(expected[0].length, provided[0].length, "Column is not same");
+        for (int i = 0; i < expected.length; i++)
+            for (int j = 0; j < expected[0].length; j++)
+                if (expected[i][j] != provided[i][j]) {
+                    System.out.println(i + "," + j + " is not same for both. Expected " + expected[i][j] + " provide " + provided[i][j]);
+                    Assert.assertEquals(expected[i][j], provided[i][j]);
+                }
+
+    }
 }
