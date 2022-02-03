@@ -18,6 +18,5 @@ public class LengthOfLastWord_Solution_Test {
         Assertions.assertEquals(5, new LengthOfLastWord_Solution().lengthOfLastWord("Hello World"));
         Assertions.assertEquals(4, new LengthOfLastWord_Solution().lengthOfLastWord("   fly me   to   the moon  "));
         Assertions.assertEquals(3, new LengthOfLastWord_Solution().lengthOfLastWord("   fly me   to   the   "));
-        Assertions.assertNotEquals(6, new LengthOfLastWord_Solution().lengthOfLastWord("luffy is still joyboy"));
     }
 }
