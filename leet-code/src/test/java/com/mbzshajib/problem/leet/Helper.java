@@ -89,11 +89,11 @@ public class Helper {
     public static void print(List<List<Integer>> result) {
         result.stream()
                 .filter(data -> {
-                    data.stream().forEach(System.out::print);
+                    String listString = data.stream().map(integer -> integer.toString()).collect(Collectors.joining(","));
+                    System.out.println(listString);
                     return true;
-                }).forEach(data -> {
-                    System.out.println();
-                });
+                }).collect(Collectors.toList());
+        System.out.println();
     }
 
     public static void check2DMatrix(int[][] expected, int[][] result) {
@@ -122,6 +122,7 @@ public class Helper {
                 }
 
     }
+
     public static void validateTwoMatrix(char[][] expected, char[][] provided) {
         Assertions.assertEquals(expected.length, provided.length, "Row is not same");
         Assertions.assertEquals(expected[0].length, provided[0].length, "Column is not same");
