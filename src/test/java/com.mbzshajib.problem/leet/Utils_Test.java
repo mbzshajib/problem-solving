@@ -4,6 +4,10 @@ package com.mbzshajib.problem.leet;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.math.BigDecimal;
+import java.nio.ByteBuffer;
+import java.util.Random;
+
 
 /**
  * @author: Zaman Shajib
@@ -133,5 +137,14 @@ public class Utils_Test {
         }
         Assertions.assertEquals(data.length, count);
         Assertions.assertArrayEquals(data, result);
+    }
+
+    String generateRandom() {
+        return Long.toHexString(0x100000L+new Random().nextLong()%0x7FFFFFL);
+    }
+
+    @Test
+    void testGenerateRandom() {
+        System.out.println(generateRandom());
     }
 }

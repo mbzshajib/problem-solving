@@ -2,6 +2,7 @@ package com.mbzshajib.problem.leet;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -134,4 +135,32 @@ public class Helper {
                 }
 
     }
+
+    @Test
+    void testremoveLeadingZero() {
+        Assertions.assertEquals("0", removeLeadingZeros(new StringBuilder("00")));
+        Assertions.assertEquals("1", removeLeadingZeros(new StringBuilder("001")));
+        Assertions.assertEquals("10", removeLeadingZeros(new StringBuilder("0010")));
+        Assertions.assertEquals("0", removeLeadingZeros(new StringBuilder("0")));
+        Assertions.assertEquals("100", removeLeadingZeros(new StringBuilder("100")));
+
+    }
+
+    ;
+
+    String removeLeadingZeros(StringBuilder builder) {
+        int leadingZeroCount = 0;
+        for (int i = 0; i < builder.length(); i++) {
+            if (builder.charAt(i) == '0') {
+                leadingZeroCount++;
+            } else {
+                break;
+            }
+        }
+        builder.delete(0, leadingZeroCount);
+        if (builder.length() == 0) return "0";
+        else return builder.toString();
+    }
+
+    ;
 }
